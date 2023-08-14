@@ -1,0 +1,347 @@
+<html>
+<head>
+  <title>Manuales de Usuario SIGA</title>
+
+  <!--Fuentes usadas para distintos titulos-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+  <!--Estilo para centrar todo tipo de texto-->
+  <style>
+    .Texto {
+      text-align: left;
+      font-size: 16px;
+    }
+
+    .Texto1 {
+      text-align: center;
+    }
+  </style>
+
+
+
+  <!--Estilos de Menu de la parte izquierda-->
+  <style>
+    /* Estilos CSS para el menú fijo */
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100vh;
+      background-color: #000000;
+      padding: 10px;
+    }
+
+    /* Estilos para los elementos del menú */
+    .menu ul,
+    .menu li {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu li a {
+      text-decoration: none;
+      color: #ffffff;
+      display: block;
+      padding: 10px;
+    }
+
+    .menu li ul {
+      margin-top: 5px;
+      background-color: #292929;
+      border: 1px solid #000000;
+      display: none; /* Oculta los submenús por defecto */
+      transition: opacity 0.3s ease, visibility 0.3s ease; /* Agrega una transición suave */
+    }
+
+    .menu li:hover ul {
+      opacity: 1;
+      display: block; /* Muestra el submenú al pasar el cursor por encima del elemento */
+    }
+
+    .menu li ul li {
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu li ul li a {
+      padding: 8px 20px;
+    }
+    .content {
+    margin-left: 270px;
+    padding: 20px;
+    }
+  </style>
+
+  <!--Estilo de la fuente que elegimos -->
+  <style>
+    .cssFont_1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  color: #000000;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  }
+  </style>
+
+  <!--Estilos de los botones del menu-->
+  <style>
+    .Btn {
+        width: 150px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(15, 15, 15);
+        border: none;
+        color: white;
+        font-weight: 600;
+        gap: 8px;
+        cursor: pointer;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+        position: relative;
+        overflow: hidden;
+        transition-duration: .3s;
+    }
+    .Btn::before {
+      width: 150px;
+      height: 130px;
+      position: absolute;
+      content: "";
+      background-color: white;
+      border-radius: 50%;
+      left: -100%;
+      top: 0;
+      transition-duration: .3s;
+      mix-blend-mode: difference;
+    }
+
+    .Btn:hover::before {
+      transition-duration: .3s;
+      transform: translate(100%,-50%);
+      border-radius: 0;
+    }
+
+    .Btn:active {
+      transform: translate(5px,5px);
+      transition-duration: .3s;
+    }
+  </style>
+
+</head>
+<body>
+  <!--Contenedor del menu-->
+  <div class="menu">
+    <ul>
+      <li>
+        <a href="Introduccion.html">
+          <button class="Btn">
+            Introduccion
+          </button>
+        </a>
+      </li>
+      <li>
+        <a href="Diagrama.html">
+          <button class="Btn">
+            Diagrama General
+          </button>
+        </a>
+      </li>
+      <li>
+        <a>
+          <button class="Btn">
+            Perfil Estudiante
+          </button>
+        </a>
+        <ul>
+          <li>
+            <a href="Solicitud de Matricula.html">
+              <button class="Btn">
+            1. Solicitud de matricula
+          </button>
+          </a>
+          </li>
+          <li>
+            <a href="Consulta Matricula.html">
+            <button class="Btn">
+            2. Consulta Matricula
+            </button>
+          </a>
+            </li>
+          <li>
+            <a href="Actualizar Ficha personal.html">
+            <button class="Btn">
+            3. Actualizar Ficha personal
+            </button>
+          </a>
+          </li>
+          <li>
+            <a href="Mi Semestre.html">
+              <button class="Btn">
+            4. Mi Semestre
+            </button>
+            </a>
+          </li> 
+          <li>
+            <a href="recuperar_contraseña.html">
+              <button class="Btn">
+              5. Recuperar Contraseña
+            </button>
+            </a>
+          </li> 
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <button class="Btn">
+          Perfil Docente
+        </button>
+        </a>
+        <ul>
+          <li>
+            <a href="#">
+              <button class="Btn">
+              6. Ficha Docente
+            </button>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <button class="Btn">
+              7. Calendario Docente
+            </button>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+    </ul>
+  </div>
+  
+    <!--Contenedor del contenido-->
+  <div class="content">
+    <div class="cssFont_1" style="font-family: 'Anton', sans-serif; text-align: center; font-size: 35px;">Actualizar Ficha personal</div>
+    <br>
+    <br>
+    <div class="cssFont_1">1. Colocar su usuario y contraseña presione en el botón ingresar.</div>
+    <br>
+    <div class="center"> <!--Contenedor del contenido (Gif)-->
+      <img src="https://i.ibb.co/VSzV7yr/New-Project-7.gif" alt="New-Project-7" border="0">
+    </div>
+    <br>
+    <div class="cssFont_1">2. Luego nos dirijimos a la parte superior y damos clic en el icono en forma de casa , para luego dar clic en Academico</div>
+    <br>
+    <div class="center"> <!--Contenedor del contenido (Gif)-->
+    <img src="https://i.ibb.co/FWydxV5/New-Project.gif" alt="New-Project" border="0"> 
+    </div>
+    <br>
+    <div class="cssFont_1">3. Una vez que haya ingresado en el módulo Académico, en el menu "Estudiante" , dar click en el submenu ¨Ficha Personal¨. Se abrirá la Ficha Personal en caso de ser nuevo los campos vendrán sin llenar y en caso de estudiantes que se han matriculado en semestres anteriores mediante el SIGA vendrá con los datos pre cargados.</div>
+    <br>
+    <div class="center"> <!--Contenedor del contenido (Gif)-->
+    <img src="https://i.ibb.co/Rv5FcfL/New-Project-1.gif" alt="New-Project-1" border="0">
+    </div>
+    <br>
+    <div class="cssFont_1" style="font-family: 'Anton', sans-serif; text-align: left; font-size: 35px;">Datos personales</div>
+    <br>
+    <ul class="cssFont_1">
+      <li>Seleccionar una foto apropiada, con fondo blanco y que se aprecie bien el rostro.</li>
+      <li>Los campos son de 3 tipos:seleccionar, texto, libre y tipo fecha.</li>
+      <li>Los campos obligatorios están marcados con un asterisco de color rojo, estos no pueden dejarse en blanco debido a que deben cargarse en el sistema. </li>
+      <li>Hay una consideración importante en el campo "Etnia" al darle click aparecerán un conjunto de valores los cuales pueden ser seleccionados, si selecciona la etnia indígena se habilitara el campo "Pueblo/Nacionalidad" para seleccionar los que estén disponibles, en el caso de no seleccionar la nacionalidad indígena y seleccionar otra etnia automáticamente se bloqueara el campo "Pueblo/Nacionalidad".</li>
+    </ul>
+    <div class="center"> <!--Contenedor del contenido (Gif)-->
+    <img src="https://i.ibb.co/wsLjn4S/New-Project-2.gif" alt="New-Project-2" border="0">  
+    </div>
+    <br>
+    <ul class="cssFont_1">
+      <li>En el campo de discapacidad si selecciona NO, se bloquearan ciertos campos y podrá pasar al siguiente campoEnfermedades catastróficas.</li>
+      <li>Si tiene alguna discapacidad selecciona SI y se habilitaran los campos:tipo de discapacidad, porcentaje de discapacidad y número del carnet, en caso de no contar con el carnet tendrá que seleccionar que no tiene una discapacidad y seleccionar una enfermedad catastrófica y cuando se comunique un docente con usted le indicar la particularidad de su caso.</li>
+    </ul>
+    <br>
+    <div class="center"> <!--Contenedor del contenido (Gif)-->
+      <img src="https://i.ibb.co/qnvrWZ0/New-Project-3.gif" alt="New-Project-3" border="0">  
+    </div>
+    <br>
+    <div class="cssFont_1" style="font-family: 'Anton', sans-serif; text-align: left; font-size: 35px;">Datos de contacto y Datos adicionales</div>
+    <br>
+    <ul class="cssFont_1">
+      <li>Tendrá que completar los datos.</li>
+      <li>En el campo Cantón de nacimiento se tendrá que llenar presionando el icono de lupa y se abrirá una ventana emergente en la que podrá filtra por Provincia o por el Nombre del Catón, escriba la Provincia y presione la tecla tab de su teclado para pasar a llenar el campo del Cantón, evite presionar la tecla enter.</li>
+      <li>En el campo de Cantón de residencia se llenara de igual manera.</li>
+    </ul>
+    <br>
+    <div class="center"> <!--Contenedor del contenido (Gif)-->
+    <img src="https://i.ibb.co/n3gSr1B/New-Project-4.gif" alt="New-Project-4" border="0">
+    </div>
+    <br>
+    <ul class="cssFont_1" >
+      <li>El campo de ubicación geográfica tendrá que colocar la latitud y longitud de donde vive para ello tendrá que darle click en el botón cargar información y aparecerá una ventana emergente en la cual podrá buscar su ubicación, en caso de que le aparezca un mensajes de Google en el que diga que no puede cargar correctamente los mapas simplemente tendrá que darle doble click y le permitirá seleccionar su ubicación, para hacer zoom tendrá que presionar la tecla Ctrl de su teclado y con el Scrolldel mouse, para seleccionar su latitud y longitud tendrá que dar click izquierdo y automáticamente se va capturar los puntos le da click en el botón aceptar y automáticamente se llenará los campos.</li>
+    </ul>
+    <br>
+    <div class="center"> <!--Contenedor del contenido (Gif)-->
+    <img src="https://i.ibb.co/mz70Yj3/New-Project-5.gif" alt="New-Project-5" border="0">
+    </div>
+    <br>
+    <ul class="cssFont_1" >
+      <li>Terminar de completar la información faltante.</li>
+    </ul>
+    <br>
+    <div class="cssFont_1" style="font-family: 'Anton', sans-serif; text-align: left; font-size: 35px;">Datos Institucionales</div>
+    <br>
+    <div class="cssFont_1"> En el campo "Tipo de colegio" darle click y colocar el colegio en el que se gradúo.</div>
+    <br>
+    <div class="center"> <!--Contenedor del contenido (Gif)-->
+    <img src="https://i.ibb.co/VtyRzWk/New-Project-6.gif" alt="New-Project-6" border="0">
+    </div>
+    <br>
+    <ul class="cssFont_1" >
+      <li>En el campo El estudiante se encuentra dedicado a: existen 2 opciones Si el usuario: **SOLO ESTUDIA o TRABAJA Y ESTUDIA.**Al seleccionar SOLO ESTUDIA en el campo N.-37 tendrá que colocar NO APLICA, pero en el caso de seleccionar TRABAJA Y ESTUDIA. tendrá que seleccionar cualquiera de las tres opciones disponibles.</li>
+    </ul>
+    <br>
+    <div class="center"> <!--Contenedor del contenido (Gif)-->
+    <img src="https://i.ibb.co/LJdy6JR/New-Project-7.gif" alt="New-Project-7" border="0">
+    </div>
+    <br>
+    <ul class="cssFont_1" >
+      <li>En el campo Mantiene la gratuidad viene bloqueado asi que no tiene que modificar nada.</li>
+      <li>En el campo Pensión diferencia va a seleccionar de acuerdo a su situación.      </li>
+      <li>En el campo Bono de desarrollo tendrá que marcar en caso de que reciba, pero en el caso de no recibir se dejara sin marcar.      </li>
+    </ul>
+    <br>
+    <div class="cssFont_1" style="font-family: 'Anton', sans-serif; text-align: left; font-size: 35px;">Prácticas Pre-Profesionales y Vinculación</div>
+    <br>
+    <ul class="cssFont_1" >
+      <li>En el campo de prácticas pre-profesionales solo se colocará información referente a las prácticas que ha hecho en el nivel superior al igual que en el campo de vinculación con la sociedad, en caso de haber realizados las prácticas pre-profesionales a nivel superior marcar la casilla y colocar el número de horas realizadas.</li>
+      <li>En el campo Entorno Institucional es donde realizo las prácticas pre-profesionales y seleccionar una de las opciones, en el caso de no haber realizado las practicas tiene que seleccionar la opción de no aplica y completar los datos faltantes.</li>
+      <li>Terminado de llenar todos los campos dar click en el botón guardar y luego darle click en el botón imprimir ficha y se va generar un archivo pdf con ciertos datos que usted registro en estas tres secciones, cabe recalcar que no aparecerán todos datos solo los mas relevantes luego tendrá que firmarla con Esfero de color azul y posteriormente se la utilizará para su formalización de pre-matricula.      </li>
+    </ul>
+    <br>
+    <div class="center"> <!--Contenedor del contenido (Gif)-->
+    <img src="https://i.ibb.co/SmrbwFV/New-Project-8.gif" alt="New-Project-8" border="0">
+    </div>
+    <br>
+    <br>
+    <div class="cssFont_1" style="font-family: 'Anton', sans-serif; text-align: center; font-size: 35px;">Diagrama de Actualizar Ficha Personal</div>
+    <br>
+    <div style="text-align: center;">
+      <img src="https://i.ibb.co/5Rv7W1q/2y3-Ficha-Personal-y-Matriculacion.png" alt="2y3-Ficha-Personal-y-Matriculacion" width="800" height="800" style="margin: 0 auto;">
+    </div>
+
+
+
+
+  </div>
+</body>
+</html>

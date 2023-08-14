@@ -1,0 +1,217 @@
+<html>
+<head>
+  <title>Manuales de Usuario SIGA</title>
+
+  <!--Fuentes usadas para distintos titulos-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+  <style>
+    .Texto {
+      text-align: center;
+    }
+
+
+  </style>
+
+  <!--Estilos de Menu de la parte izquierda-->
+  <style>
+    /* Estilos CSS para el menú fijo */
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100vh;
+      background-color: #000000;
+      padding: 10px;
+    }
+
+    /* Estilos para los elementos del menú */
+    .menu ul,
+    .menu li {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu li a {
+      text-decoration: none;
+      color: #ffffff;
+      display: block;
+      padding: 10px;
+    }
+
+    .menu li ul {
+      margin-top: 5px;
+      background-color: #292929;
+      border: 1px solid #000000;
+      display: none; /* Oculta los submenús por defecto */
+      transition: opacity 0.3s ease, visibility 0.3s ease; /* Agrega una transición suave */
+    }
+
+    .menu li:hover ul {
+      opacity: 1;
+      display: block; /* Muestra el submenú al pasar el cursor por encima del elemento */
+    }
+
+    .menu li ul li {
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu li ul li a {
+      padding: 8px 20px;
+    }
+    .content {
+    margin-left: 270px;
+    padding: 20px;
+    }
+  </style>
+
+  <!--Estilos de los botones del menu-->
+  <style>
+    .Btn {
+        width: 150px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(15, 15, 15);
+        border: none;
+        color: white;
+        font-weight: 600;
+        gap: 8px;
+        cursor: pointer;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+        position: relative;
+        overflow: hidden;
+        transition-duration: .3s;
+    }
+    .Btn::before {
+      width: 150px;
+      height: 130px;
+      position: absolute;
+      content: "";
+      background-color: white;
+      border-radius: 50%;
+      left: -100%;
+      top: 0;
+      transition-duration: .3s;
+      mix-blend-mode: difference;
+    }
+
+    .Btn:hover::before {
+      transition-duration: .3s;
+      transform: translate(100%,-50%);
+      border-radius: 0;
+    }
+
+    .Btn:active {
+      transform: translate(5px,5px);
+      transition-duration: .3s;
+    }
+  </style>
+
+</head>
+<body>
+  <!--Contenedor del menu-->
+  <div class="menu">
+    <ul>
+      <li>
+        <a href="Introduccion.html">
+          <button class="Btn">
+            Introduccion
+          </button>
+        </a>
+      </li>
+      <li>
+        <a href="Diagrama.html">
+          <button class="Btn">
+            Diagrama General
+          </button>
+        </a>
+      </li>
+      <li>
+        <a>
+          <button class="Btn">
+            Perfil Estudiante
+          </button>
+        </a>
+        <ul>
+          <li>
+            <a href="Solicitud de Matricula.html">
+              <button class="Btn">
+            1. Solicitud de matricula
+          </button>
+          </a>
+          </li>
+          <li>
+            <a href="Consulta Matricula.html">
+            <button class="Btn">
+            2. Consulta Matricula
+            </button>
+          </a>
+            </li>
+          <li>
+            <a href="Actualizar Ficha personal.html">
+            <button class="Btn">
+            3. Actualizar Ficha personal
+            </button>
+          </a>
+          </li>
+          <li>
+            <a href="Mi Semestre.html">
+              <button class="Btn">
+            4. Mi Semestre
+            </button>
+            </a>
+          </li> 
+          <li>
+            <a href="recuperar_contraseña.html">
+              <button class="Btn">
+              5. Recuperar Contraseña
+            </button>
+            </a>
+          </li> 
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <button class="Btn">
+          Perfil Docente
+        </button>
+        </a>
+        <ul>
+          <li>
+            <a href="#">
+              <button class="Btn">
+              6. Ficha Docente
+            </button>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <button class="Btn">
+              7. Calendario Docente
+            </button>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+    </ul>
+  </div>
+  
+    <!--Contenedor del contenido-->
+  <div class="content">
+    <div class="cssFont_1" style="font-family: 'Anton', sans-serif; text-align: center; font-size: 35px;">Recuperar Contraseña</div>
+    <br>
+    <h1 class="Texto">Diagrama de Recuperar contraseña</h1>
+    <img src="https://i.ibb.co/zJ2jn6T/Diagrama-de-Recuperar-contrase-a.png" alt="Diagrama-de-Recuperar-contrase-a" 
+    width="800" height="800" style="display: block; margin: 0 auto;">
+
+  </div>
+</body>
+</html>

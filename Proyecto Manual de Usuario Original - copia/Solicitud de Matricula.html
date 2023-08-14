@@ -1,0 +1,275 @@
+<html>
+<head>
+  <title>Manuales de Usuario SIGA</title>
+
+  <!--Fuentes usadas para distintos titulos-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <!--Estilo para centrar todo tipo de texto-->
+  <style>
+    .Texto {
+      text-align: left;
+      font-size: 16px;
+    }
+  </style>
+
+  <!--Estilo de la fuente que elegimos -->
+  <style>
+    .cssFont_1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  color: #000000;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  }
+  </style>
+
+  <!--Estilo del contenedor del GIF-->
+  <style>
+      .center {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh; /* Ajusta la altura según tus necesidades */
+      }
+      
+      .center img {
+          max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
+          max-height: 100%; /* Ajusta la altura máxima de la imagen */
+      }
+  </style>
+
+  <!--Estilos de Menu de la parte izquierda-->
+  <style>
+    /* Estilos CSS para el menú fijo */
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100vh;
+      background-color: #000000;
+      padding: 10px;
+    }
+
+    /* Estilos para los elementos del menú */
+    .menu ul,
+    .menu li {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu li a {
+      text-decoration: none;
+      color: #ffffff;
+      display: block;
+      padding: 10px;
+    }
+
+    .menu li ul {
+      margin-top: 5px;
+      background-color: #292929;
+      border: 1px solid #000000;
+      display: none; /* Oculta los submenús por defecto */
+      transition: opacity 0.3s ease, visibility 0.3s ease; /* Agrega una transición suave */
+    }
+
+    .menu li:hover ul {
+      opacity: 1;
+      display: block; /* Muestra el submenú al pasar el cursor por encima del elemento */
+    }
+
+    .menu li ul li {
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu li ul li a {
+      padding: 8px 20px;
+    }
+    .content {
+    margin-left: 270px;
+    padding: 20px;
+    }
+  </style>
+
+  <!--Estilos de los botones del menu-->
+  <style>
+    .Btn {
+        width: 150px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(15, 15, 15);
+        border: none;
+        color: white;
+        font-weight: 600;
+        gap: 8px;
+        cursor: pointer;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+        position: relative;
+        overflow: hidden;
+        transition-duration: .3s;
+    }
+    .Btn::before {
+      width: 150px;
+      height: 130px;
+      position: absolute;
+      content: "";
+      background-color: white;
+      border-radius: 50%;
+      left: -100%;
+      top: 0;
+      transition-duration: .3s;
+      mix-blend-mode: difference;
+    }
+
+    .Btn:hover::before {
+      transition-duration: .3s;
+      transform: translate(100%,-50%);
+      border-radius: 0;
+    }
+
+    .Btn:active {
+      transform: translate(5px,5px);
+      transition-duration: .3s;
+    }
+  </style>
+
+</head>
+<body>
+  <!--Contenedor del menu-->
+  <div class="menu">
+    <ul>
+      <li>
+        <a href="Introduccion.html">
+          <button class="Btn">
+            Introduccion
+          </button>
+        </a>
+      </li>
+      <li>
+        <a href="Diagrama.html">
+          <button class="Btn">
+            Diagrama General
+          </button>
+        </a>
+      </li>
+      <li>
+        <a>
+          <button class="Btn">
+            Perfil Estudiante
+          </button>
+        </a>
+        <ul>
+          <li>
+            <a href="Solicitud de Matricula.html">
+              <button class="Btn">
+            1. Solicitud de matricula
+          </button>
+          </a>
+          </li>
+          <li>
+            <a href="Consulta Matricula.html">
+            <button class="Btn">
+            2. Consulta Matricula
+            </button>
+          </a>
+            </li>
+          <li>
+            <a href="Actualizar Ficha personal.html">
+            <button class="Btn">
+            3. Actualizar Ficha personal
+            </button>
+          </a>
+          </li>
+          <li>
+            <a href="Mi Semestre.html">
+              <button class="Btn">
+            4. Mi Semestre
+            </button>
+            </a>
+          </li> 
+          <li>
+            <a href="recuperar_contraseña.html">
+              <button class="Btn">
+              5. Recuperar Contraseña
+            </button>
+            </a>
+          </li> 
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <button class="Btn">
+          Perfil Docente
+        </button>
+        </a>
+        <ul>
+          <li>
+            <a href="#">
+              <button class="Btn">
+              6. Ficha Docente
+            </button>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <button class="Btn">
+              7. Calendario Docente
+            </button>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+    </ul>
+  </div>
+  
+  
+    <!--Contenedor del contenido-->
+  <div class="content">
+    <div class="cssFont_1" style="font-family: 'Anton', sans-serif; text-align: center; font-size: 35px;">Solicitud de Matricula</div>
+    <br>
+    <div class="cssFont_1" style="font-family:'Montserrat', sans-serif">1. Primero ingresamos al sistema SIGA.</div>
+    <div class="center"> <!--Contenedor del contenido (Gif)-->
+      <img src="https://i.ibb.co/gVf0R9Q/New-Project-1.gif" alt="New-Project-1" border="0">
+    </div>
+    <br>
+    <div class="cssFont_1">2. Dirijase a módulos de click en ACADEMICOS, le saldrá la opción de estudiante y presione en solicitud de matrícula previamente observará la matrícula.</div>
+    <br>
+    <div class="center"> <!--Contenedor del contenido (Gif)-->
+      <img src="https://i.ibb.co/Ky712qG/New-Project-2.gif" alt="New-Project-2" border="0">
+    </div>
+    <br>
+    <div class="cssFont_1">3. En la primera parte de la matrícula podrá observar sus datos, como el instituto, el preriodo, sus nombres, su número de cédula, el centro de estudio, la carrera en la que usted será matriculará, la jornada, el nivel academico, el paralelo, el tipo de matrícula, modalidad y en caso de haber perdido la gratitud el número del comprobante de pago</div>
+    <br>
+    <div class="center"> <!--Contenedor del contenido (Gif)-->
+    <img src="https://i.ibb.co/JxsCpry/New-Project-4.gif" alt="New-Project-4" border="0">
+    </div>
+    <br>
+    <div class="cssFont_1">4. Después de los datos podrá observar la malla curricular, estás son las asiganturas que tendra en base a los 5 niveles dependiendo la carrera que se este matriculando.</div>
+    <br>
+    <div class="center"> <!--Contenedor del contenido (Gif)-->
+    <img src="https://i.ibb.co/ZBF8gq1/New-Project-5.gif" alt="New-Project-5" border="0">
+    </div>
+    <br>
+    <div class="cssFont_1">5. Al final estan los documentos requeridos que son la cédula, el certificado de no adeudar o comprobante de pago, otros documentos y título de grado, favor tenga en cuenta que unos son requeridos y otros no pero se recomienda subirlos todos, fianlemnte de click en guardar y estará la solicitud de matrícula.</div>
+    <div class="center"> <!--Contenedor del contenido (Gif)-->
+    <img src="https://i.ibb.co/7CZtdZS/New-Project-6.gif" alt="New-Project-6" border="0">
+    </div>
+  </div>
+</body>
+</html>
